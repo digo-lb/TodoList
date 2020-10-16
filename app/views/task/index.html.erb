@@ -1,0 +1,29 @@
+<h1>Tasks</h1>
+<table style="border: 1px solid black;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid black;">Title</th>
+            <th style="border: 1px solid black;">Description</th>
+            <th style="border: 1px solid black;">Due</th>
+            <th style="border: 1px solid black;">Done</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @tasks.each do |task| %>
+            <tr>
+                <td style="border: 1px solid black;"> <%= task.title %> </td>
+                <td style="border: 1px solid black;"> <%= task.description %> </td>
+                <td style="border: 1px solid black;"> <%= task.due %> </td>
+                <td style="border: 1px solid black;"> <%= task.done %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Task' %>
+<%= link_to 'Consultar Task' %>
+<%= link_to 'Editar Task' %>
+<%= link_to 'Remover Task' %>
